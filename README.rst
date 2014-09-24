@@ -25,6 +25,6 @@ available variables:
 
 - git_email(if not specified, the value from .gitconfig in dotfiles will be taken)
 - git_name(if not specified, the value from .gitconfig in dotfiles will be taken)
-- username(Github)
-- password(Github)
+- username(Github)(required)
+- password(Github)(required)
 - key_title(title of the key sent to Github)
