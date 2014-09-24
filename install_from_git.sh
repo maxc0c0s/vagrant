@@ -14,3 +14,8 @@ fi
 if [[ -n "$git_email" ]]; then
     git config --global user.email "$git_email";
 fi
+
+# Install vundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# Install plugins
+vim +PluginInstall +qall
