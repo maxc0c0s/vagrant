@@ -18,6 +18,10 @@ install_from_git.sh
 ^^^^^^^^^^^^^^^^^^^^^
 Install maxc0c0s/dotfiles. Note: customization can be done through custom.sh
 
+install_docker.sh
+^^^^^^^^^^^^^^^^^^^^^
+Install docker. Either the lastest Ubuntu package or the latest version from the official repo. Just uncomment the desired one.
+
 custom.sh
 ^^^^^^^^^^^^^^^^^^^^^
 This file must be added manually.

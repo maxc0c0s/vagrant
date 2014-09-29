@@ -59,6 +59,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Shell script  provisioning.
   config.vm.provision "shell", path: "set_timezone.sh"
   config.vm.provision "shell", path: "install_from_apt.sh"
+  config.vm.provision "shell", path: "install_docker.sh"
   config.vm.provision "shell", path: "user_setup.sh", privileged: false
   config.vm.provision "shell", path: "install_from_git.sh", privileged: false
 
