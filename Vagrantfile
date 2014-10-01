@@ -45,13 +45,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider "virtualbox" do |vb|
+  config.vm.provider "virtualbox" do |vb|
   #   # Don't boot with headless mode
   #   vb.gui = true
   #
-  #   # Use VBoxManage to customize the VM. For example to change memory:
-  #   vb.customize ["modifyvm", :id, "--memory", "1024"]
-  # end
+     # Use VBoxManage to customize the VM. For example to change memory:
+     vb.customize ["modifyvm", :id, "--memory", "1024"]
+  end
   #
   # View the documentation for the provider you're using for more
   # information on available options.
@@ -60,6 +60,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", path: "set_timezone.sh"
   config.vm.provision "shell", path: "install_from_apt.sh"
   config.vm.provision "shell", path: "install_docker.sh"
+  config.vm.provision "shell", path: "install_openerp_deps.sh"
   config.vm.provision "shell", path: "user_setup.sh", privileged: false
   config.vm.provision "shell", path: "install_from_git.sh", privileged: false
 
